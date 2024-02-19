@@ -3,9 +3,7 @@ package com.example.newspot.controller;
 import com.example.newspot.models.Dto.User;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 //import java.util.Locale;
@@ -14,10 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class BaseController {
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "greeting";
+    @GetMapping("/ping123")
+    public String Ping() {
+        return "ping";
     }
 
     @GetMapping("/greeting123")
